@@ -44,7 +44,7 @@ const Login: React.FC = () => {
         });
       } else {
         const res = await axios.post<LoginResponse>(
-          `${import.meta.env.VITE_BACKEND_URL}/api/v2/user/login`,
+          `${import.meta.env.VITE_BACKEND_URL}api/v2/user/login`,
           values,
           {
             withCredentials: true,

@@ -1,10 +1,13 @@
 import app from "./app.js";
 
+const port = process.env.PORT || 3000;
 
-const port  = process.env.PORT;
+// ✅ Ping route for deployment check
+app.get("/", (req, res) => {
+  res.status(200).send("✅ Backend Deployment Successful");
+});
 
-
-//start server at port 
-app.listen(port,()=>{
-    console.log(`server is running on port ${port}`);
-})
+// Start server at port
+app.listen(port, () => {
+  console.log(`🚀 Server is running on port ${port}`);
+});
